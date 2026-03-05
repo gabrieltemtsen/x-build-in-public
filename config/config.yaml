@@ -6,6 +6,7 @@ github:
     - strategic-archives-agent
     - digital-products-agent
     - bet
+    - x-build-in-public
   check_interval_minutes: 30
 
 content:
