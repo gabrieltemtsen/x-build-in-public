@@ -56,11 +56,20 @@ def get_new_events(username: str, repos: list[str]) -> list[dict]:
             commits = r.json()
 
             last_sha = state.get(repo, {}).get("last_sha")
+            is_first_run = last_sha is None
+
             new_commits = []
             for c in commits:
                 if c["sha"] == last_sha:
                     break
                 new_commits.append(c)
+
+            if is_first_run:
+                # Seed state silently on first run — don't post about old commits
+                if commits:
+                    state.setdefault(repo, {})["last_sha"] = commits[0]["sha"]
+                    logger.info(f"[{repo}] First run — seeded state at {commits[0]['sha'][:7]}, no post")
+                continue
 
             if new_commits:
                 # Update state with latest SHA
@@ -91,6 +100,9 @@ def get_new_events(username: str, repos: list[str]) -> list[dict]:
                 })
 
             # --- Merged PRs ---
+            if is_first_run:
+                continue  # already seeded above, skip PR check on first run
+
             prs_url = f"{GITHUB_API}/repos/{username}/{repo}/pulls?state=closed&per_page=5"
             pr_r = requests.get(prs_url, headers=_headers(), timeout=10)
             if pr_r.ok:
