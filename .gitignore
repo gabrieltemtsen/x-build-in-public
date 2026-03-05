@@ -1,0 +1,7 @@
+.env
+state/
+newsletter_drafts/
+__pycache__/
+*.pyc
+.venv/
+venv/

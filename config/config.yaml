@@ -1,0 +1,29 @@
+github:
+  username: gabrieltemtsen
+  repos:
+    - strategic-archives-agent
+    - digital-products-agent
+    - bet
+  check_interval_minutes: 30
+
+content:
+  niche: "AI automation, DeFi, building profitable bots with Python"
+  tone: "confident builder, no fluff, Nigerian dev grinding in public"
+  voice_examples:
+    - "I built a bot that does X. Here's how it works 🧵"
+    - "Most devs overcomplicate this. Here's the simple version:"
+    - "Nobody is talking about this. But it's making me money."
+  daily_tweets: 3
+  posting_times_wat:
+    - "09:00"
+    - "13:00"
+    - "18:30"
+
+twitter:
+  dry_run: true   # ← set to false when ready to post live
+
+newsletter:
+  enabled: false   # enable when Beehiiv API key is set
+  day: "sunday"
+  time_wat: "08:00"
+  output_dir: "newsletter_drafts"
