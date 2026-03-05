@@ -47,6 +47,9 @@ DAILY_TOPICS = [
 ]
 
 
+TWITTER_HANDLE = "@gabe_temtsen"
+
+
 def _gemini_generate(prompt: str) -> str:
     genai.configure(api_key=os.environ["GEMINI_API_KEY"])
     model = genai.GenerativeModel("gemini-2.5-flash")
@@ -108,7 +111,7 @@ Write a Twitter thread (5–7 tweets) that:
 - Opens with a killer hook that stops the scroll (no "I just..." openers — be bold)
 - Explains WHAT you built and WHY it matters for making money / automating life
 - Includes 1–2 specific technical details (makes it credible, not vague)
-- Ends with a CTA: follow for more, or link to the repo
+- Ends with a CTA: "follow @gabe_temtsen for more" or link to the repo — use the actual handle
 - Uses line breaks for readability, occasional emojis (don't overdo it)
 - Each tweet must be under 270 characters
 - NO hashtag spam — max 2 hashtags total, only in the last tweet
