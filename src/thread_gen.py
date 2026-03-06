@@ -14,6 +14,11 @@ logger = logging.getLogger(__name__)
 TWEET_MAX = 270  # safe under 280
 
 REPO_CONTEXT = {
+    "clova-pay-africa": (
+        "a crypto-to-fiat offramp infrastructure for Africa — accept cUSD (Celo), USDC (Base) or USDCx (Stacks), "
+        "settle directly to Nigerian bank accounts via Paycrest. Agent-native from day 1 via x402 pay-per-call. "
+        "Built for the next wave of DeFi users across Africa."
+    ),
     "strategic-archives-agent": (
         "a fully automated YouTube content machine — uses Gemini AI to write scripts, "
         "generate AI voiceovers, create cinematic images with FLUX, animate them with Higgsfield AI, "
