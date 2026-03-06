@@ -7,6 +7,7 @@ github:
     - digital-products-agent
     - bet
     - x-build-in-public
+    - clova-pay-africa
   check_interval_minutes: 30
 
 content:
