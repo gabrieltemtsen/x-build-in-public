@@ -8,6 +8,15 @@ github:
     - bet
     - x-build-in-public
     - clova-pay-africa
+    - clenja-agent
+    - agent-mesh
+    - agent-mesh-ui
+    - clenjex
+    - airscan
+    - ai-sentinel
+    - afya-ai
+    - poly-yield
+    - evm-liquidation-bot
   check_interval_minutes: 30
 
 content:
